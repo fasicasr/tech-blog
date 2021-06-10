@@ -12,8 +12,12 @@
   justify-content: center;
 }
 
+.jumbotron {
+  background-color: aqua;
+}
+
 body {
-  background-image: url("/images/backimage.jpg");
+  /* background-image: url("/images/backimage.jpg"); */
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
