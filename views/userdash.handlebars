@@ -3,13 +3,14 @@
   </div>
 
 
-<div class="clearfix">
+{{!-- <div class="clearfix">
 <button id="logout" type="button" class="btn btn-right btn-lg float-right">Logout</button>>
-</div>
+</div> --}}
   <div class="container">
     <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-secondary btn-lg pull-right" data-bs-toggle="modal" data-bs-target="#newProjectModal">+ New Project</button>
-  
+    <div class="fixed-bottom text-center">
+    <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#newProjectModal">+ New Post</button>
+    </div>
     <!-- Modal -->
     <div class="modal fade" id="newProjectModal" tabindex="-1" aria-labelledby="newProjectLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -43,7 +44,7 @@
   <div class="row3">
     
     <div class="col-md-6 project-list">
-      <h3>Current Projects:</h3>
+      {{!-- <h3>Current Projects:</h3> --}}
 
       {{#each userProjects as |project|}}
       <div class="row mb-2"><a href="api/projects/{{project.song_id}}">
