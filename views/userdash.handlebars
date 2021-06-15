@@ -9,20 +9,20 @@
   <div class="container">
     <!-- Trigger the modal with a button -->
     <div class="fixed-bottom text-center">
-    <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#newProjectModal">+ New Post</button>
+    <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#newPostModal">+ New Post</button>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="newProjectModal" tabindex="-1" aria-labelledby="newProjectLabel" aria-hidden="true">
+    <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="newProjectLabel">Create a New Project:</h5>
+            <h5 class="modal-title" id="newPostLabel">Create a New Post:</h5>
           </div>
           <div class="modal-body">
             <form>
               <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Project Name:</label>
-                <input type="text" class="form-control" id="project-name">
+                <label for="recipient-name" class="col-form-label">Post Title:</label>
+                <input type="text" class="form-control" id="post-title">
               </div>
               <div class="mb-3">
                 <label for="message-text" class="col-form-label">Description:</label>
@@ -32,7 +32,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-            <button type="button" id="create-project-button" class="btn">Create</button>
+            <button type="button" id="create-post-button" class="btn">Create</button>
           </div>
         </div>
       </div>
@@ -40,9 +40,8 @@
     
   </div>
 
-  <!-- Current Projects -->
+  <!-- Current Posts -->
   <div class="row3">
-    <h3>Current Posts:</h3>
     {{#if userPosts.length}}
     <div class="col-md-12 post-list">
       
@@ -65,7 +64,3 @@
 <script src="/js/logout.js"></script>
 <script src="/js/save-post.js"></script>
 <script src="/js/delete-post.js"></script>
-{{!-- <script src="/js/load-post.js"></script> --}}
-{{!-- <script src="/js/add-project.js"></script>
-<script src="/js/save-project.js"></script>
-<script src="/js/delete-post.js"></script> --}}

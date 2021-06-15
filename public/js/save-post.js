@@ -2,11 +2,11 @@
 //adding eventListener for create project button.
 //will create a project name and description
 document.addEventListener('DOMContentLoaded', function () {
-  const createProjectButton = document.getElementById('create-project-button');
-  createProjectButton.addEventListener('click', async (e) => {
+  const createPostButton = document.getElementById('create-post-button');
+  createPostButton.addEventListener('click', async (e) => {
     e.preventDefault();
 
-    const title = document.getElementById('project-name').value.trim();
+    const title = document.getElementById('post-title').value.trim();
     const desc = document.getElementById('discription-text').value.trim();
     const user_id = document.getElementById('greetings').getAttribute('data-user-id');
     const username = document.getElementById('greetings').getAttribute('data-username');
