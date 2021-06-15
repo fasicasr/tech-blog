@@ -2,28 +2,30 @@
 
 ## Discription 
 
-This application is a digital audio workstation that allows users to create music using a step sequencer model.
+Tech Lovers Blog is created for developers who want to blog about all things tech. 
 
 
 ## Application Display  
 
-View Application - [Here](https://viblocks.herokuapp.com/login)
+View Application - [Here](https://tech-lovers-blog.herokuapp.com/login)
 
 Preview of Application:
-![Application image](/public/images/webpagescreenshot.png)
+![Application image](/public/images/login.png)
+![Application image](/public/images/user-dash.png)
 
 ## Usage
 
-This digital audio workstation site lets users create, save, and share songs via an interface on their browser. Users can log in, choose the sounds they want to work with, and save progress made for another session. They may also choose to share their work with other creators. In this workstation, users have the ability to program a drum sequencer, and modify sounds in a pattern format. 
+This application is a mysql database built using Model View Controller(MVC) paradigm. Users are able to create and save a login information. Post any blog topics to thier liking and are able to save and review their post at a later time. Users are also delete any blog post as they see fit. 
 
 ## Technologies 
 
-* Tone.js
+* Handlebars
 * node.js
 * npm 
 * Sequelize
 * Express.js
 * MySQL
+* MVC
 
 ## License
 
@@ -31,14 +33,8 @@ This digital audio workstation site lets users create, save, and share songs via
 
 Copyright © 2021 
 
-## Questions - Reach out to the Contributors  
+## Questions 
 
-* Forest Wilson
- Github: https://github.com/ForestW70
-* Dmitry Balduev
- Github: https://github.com/dmitrybalduev
-* Fasica Robi 
- Github: https://github.com/fasicasr
-* Sallieu Kanu 
-  Github: https://github.com/salmankanu
-  
+* Github: https://github.com/fasicasr
+* Tech Lovers Blog repository: https://github.com/fasicasr/tech-lovers-blog
+* Email: Fasicasr@gmail.com
