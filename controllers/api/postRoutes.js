@@ -44,8 +44,8 @@ router.post('/', withAuth, async (req, res) => {
     const postData = await Post.create({
       username: req.body.username,
       user_id: req.body.user_id,
-      song_title: req.body.song_title,
-      song_description: req.body.song_description,
+      post_title: req.body. post_title,
+      post_content: req.body.post_content,
    
     });
     res.render('app', { postData, logged_in: true });
@@ -72,5 +72,27 @@ router.put('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    console.log(req.params.id)
+    const postData = await Post.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+
+    if (!postData) {
+      res.status(404).json({ message: 'No posts found with this id!' });
+      return;
+    }
+
+    res.status(200).json(postData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 module.exports = router;

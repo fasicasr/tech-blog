@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Post, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -17,7 +17,7 @@ router.get('/', withAuth, async (req, res) => {
     });
 
     // eslint-disable-next-line no-unused-vars
-    const users = userData.map((project) => project.get({ plain: true }));
+    const users = userData.map((post) => post.get({ plain: true }));
 
     res.redirect('/user-dash');
   } catch (err) {
@@ -40,7 +40,7 @@ router.get('/login', (req, res) => {
 
 router.get('/user-dash', withAuth, async (req, res) => {
   try {
-    const userData = await Project.findAll({
+    const userData = await Post.findAll({
       include: [
         {
           model: User,
@@ -49,10 +49,12 @@ router.get('/user-dash', withAuth, async (req, res) => {
           }
         }],
     });
+    const userPosts = userData.map(post => post.get({ plain: true }));
+  
+    res.render('userdash', { userPosts, username: req.session.username, user_id:req.session.user_id} );
+    // const userProjects = userData.map(project => project.get({ plain: true }));
 
-    const userProjects = userData.map(project => project.get({ plain: true }));
-
-    res.render('userdash', { userProjects, username: req.session.username, user_id:req.session.user_id} );
+    // res.render('userdash', { userProjects, username: req.session.username, user_id:req.session.user_id} );
   } catch (err) {
     res.status(500).json(err);
   }

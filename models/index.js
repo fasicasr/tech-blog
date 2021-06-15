@@ -17,4 +17,11 @@ Project.belongsTo(User, {
   onDelete: 'CASCADE'
 });
 
+Post.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+
+
 module.exports = { User, Project, Post };

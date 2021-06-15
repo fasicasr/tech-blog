@@ -42,27 +42,30 @@
 
   <!-- Current Projects -->
   <div class="row3">
-    
+    <h3>Current Posts:</h3>
+    {{#if userPosts.length}}
     <div class="col-md-12 post-list">
-      {{!-- <h3>Current Projects:</h3> --}}
-
-      {{#each userProjects as |project|}}
+      
+      {{#each userPosts as |post|}}
       <div class="row md-12">
         <div class="col-md-12">
-          <h4><a href="api/projects/{{project.song_id}}">{{project.song_title}}</a></h4>
-          <p>{{project.song_description}}</p>
+         <h4><a href="/post/{{post.id}}">{{post.post_title}}</a></h4>
+         <p>{{post.post_content}}</p>
         </div>
         <div class="col-md-4">
-          <button class="btn btn-sm bg-warning" data-id="{{project.song_id}}">DELETE</button>
+          <button class="btn btn-sm bg-warning" data-id="{{post.id}}">DELETE</button>
         </div>
       </div>
       {{/each}}
     </div>
-    
+    {{/if}}
   </div>
   </div>
 
 <script src="/js/logout.js"></script>
-<script src="/js/add-project.js"></script>
-<script src="/js/save-project.js"></script>
+<script src="/js/save-post.js"></script>
 <script src="/js/delete-post.js"></script>
+{{!-- <script src="/js/load-post.js"></script> --}}
+{{!-- <script src="/js/add-project.js"></script>
+<script src="/js/save-project.js"></script>
+<script src="/js/delete-post.js"></script> --}}
