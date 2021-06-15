@@ -48,7 +48,7 @@ router.post('/', withAuth, async (req, res) => {
       post_content: req.body.post_content,
    
     });
-    res.render('app', { postData, logged_in: true });
+    res.render('userdash', { postData, logged_in: true });
     //   res.status(200).json(newPost);
   } catch (err) {
     res.status(500).json(err);

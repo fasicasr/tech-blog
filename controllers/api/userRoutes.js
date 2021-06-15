@@ -1,6 +1,6 @@
 const router = require('express').Router();
 // eslint-disable-next-line no-unused-vars
-const { User, Projects } = require('../../models');
+const { User } = require('../../models');
 
 router.post('/login', async (req, res) => {
   try {

@@ -1,6 +1,6 @@
 
-//adding eventListener for create project button.
-//will create a project name and description
+//adding eventListener for create post button.
+//will create a post name and description
 document.addEventListener('DOMContentLoaded', function () {
   const createPostButton = document.getElementById('create-post-button');
   createPostButton.addEventListener('click', async (e) => {
@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
       if (response.ok) {
-        // document.querySelector('.modal').display = 'none';
         document.location.reload();
       }else{
         alert('something went wrong');

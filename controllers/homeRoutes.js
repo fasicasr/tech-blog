@@ -52,9 +52,7 @@ router.get('/user-dash', withAuth, async (req, res) => {
     const userPosts = userData.map(post => post.get({ plain: true }));
   
     res.render('userdash', { userPosts, username: req.session.username, user_id:req.session.user_id} );
-    // const userProjects = userData.map(project => project.get({ plain: true }));
-
-    // res.render('userdash', { userProjects, username: req.session.username, user_id:req.session.user_id} );
+    
   } catch (err) {
     res.status(500).json(err);
   }
