@@ -1,4 +1,4 @@
-# viBlocks
+# Tech Lovers Blog
 
 ## Discription 
 
